@@ -7,6 +7,6 @@ Utiliza el ngModel para recibir
 y property binding [img] para enviar-->
 <input type="text" [(ngModel)]="imgParent">
 <hr/>
-<app-img [img]="imgParent"></app-img>
+<app-img (loaded)="onLoaded($event)"  [img]="imgParent"></app-img>
 <!--Queremos enviar dinamicamente este componente desde el padre
 y si escribimos un input o modificamos un valor enviarlo desde app-img el padre-->

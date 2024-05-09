@@ -12,5 +12,9 @@ import { FormsModule, } from '@angular/forms';
 })
 export class AppComponent {
   /* Quiero que este componente envie y renderice una imagen */
-  imgParent = 'https://www.w3schools.com/howto/img_avatar.png';
+  imgParent = '';
+
+  onLoaded(img: string) {
+    console.log('log padre', img);
+  }
 }
