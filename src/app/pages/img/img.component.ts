@@ -1,14 +1,14 @@
 import { Component, Input } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-img',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './img.component.html',
   styleUrl: './img.component.scss'
 })
 export class ImgComponent {
-
-@Input()  img: string = 'valor init';
+/* Con @Input ImgComponent ya puede recibir datos del hijo */
+@Input() img: string = 'valor init';
 }

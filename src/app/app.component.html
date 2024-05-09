@@ -1,1 +1,12 @@
-<app-img img="Ese valor viene desde el padre"></app-img><!-- Así llamando al componente img al componente app -->
+<!--AppComponent es el Child Component -->
+<!-- img es el atributoo input que AppComponent (es el hijo) recibe de ImgComponent (padre)-->
+<!-- <app-img img="Ese valor viene desde el padre"></app-img> -->
+
+<!--Forma dinamica:
+Utiliza el ngModel para recibir
+y property binding [img] para enviar-->
+<input type="text" [(ngModel)]="imgParent">
+<hr/>
+<app-img [img]="imgParent"></app-img>
+<!--Queremos enviar dinamicamente este componente desde el padre
+y si escribimos un input o modificamos un valor enviarlo desde app-img el padre-->

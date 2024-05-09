@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ImgComponent } from "./pages/img/img.component";
+import { FormsModule, } from '@angular/forms';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [RouterOutlet, ImgComponent]
+    imports: [RouterOutlet, ImgComponent, FormsModule]
 })
 export class AppComponent {
-  title = 'my-store';
+  /* Quiero que este componente envie y renderice una imagen */
+  imgParent = 'https://www.w3schools.com/howto/img_avatar.png';
 }
