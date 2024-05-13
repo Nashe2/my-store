@@ -1,10 +1,10 @@
-<!--ImgComponent es el Parent Component-->
+<!--ImgComponent es el Child Component-->
 <!-- Fuiste diseñado para renderizar una imagen.
 Cree el ImgComponente para recibir  por medio de un input la URL de imagen -->
 
 <img
   width="200"
-  (load)="imgLoaded()"
+  (load)="imgLoadedEvent()"
   (error)="imgError()"
   [src]="img"
   alt=""

@@ -10,9 +10,9 @@ import { emit } from 'process';
   styleUrl: './img.component.scss',
 })
 export class ImgComponent {
-  /* Con @Input ImgComponent ya puede recibir datos del hijo */
-  @Input() img: string = 'valor init';
-  @Output() loaded = new EventEmitter<string>();
+  /* Con @Input ImgComponent ya puede recibir datos del padre */
+  @Input() img: string = ''; //Propiedad de entrada
+  @Output() loadedEvent = new EventEmitter<string>();
 
   imageDefault = '/assets/images/default.png';
 
@@ -20,8 +20,9 @@ export class ImgComponent {
     this.img = this.imageDefault;
   }
 
-  imgLoaded() {
+  /*  */
+  imgLoadedEvent() {
     console.log('log hijo');
-    this.loaded.emit(this.img);
+    this.loadedEvent.emit(this.img);
   }
 }

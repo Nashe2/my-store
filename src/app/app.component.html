@@ -1,12 +1,20 @@
-<!--AppComponent es el Child Component -->
-<!-- img es el atributoo input que AppComponent (es el hijo) recibe de ImgComponent (padre)-->
+<!--AppComponent es el Parent Component -->
+<!-- img es el atributoo input que AppComponent (es el padre) recibe de ImgComponent (hijo)-->
 <!-- <app-img img="Ese valor viene desde el padre"></app-img> -->
 
 <!--Forma dinamica:
 Utiliza el ngModel para recibir
 y property binding [img] para enviar-->
-<input type="text" [(ngModel)]="imgParent">
+
+<input type="text" [(ngModel)]="imgParent"> <!-- hacemos el data binding con un ngModel para enlazarlo y escucharlo  -->
 <hr/>
-<app-img (loaded)="onLoaded($event)"  [img]="imgParent"></app-img>
+<app-img (loadedEvent)="onLoaded($event)"  [img]="imgParent"></app-img>
+
+
 <!--Queremos enviar dinamicamente este componente desde el padre
 y si escribimos un input o modificamos un valor enviarlo desde app-img el padre-->
+
+<app-producto></app-producto>
+
+<!-- <router-outlet></router-outlet>
+-->
