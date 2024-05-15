@@ -1,17 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+/* Importo indeciso */
+import { Producto } from '../../models/producto.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-producto',
   standalone: true,
-  imports: [],
+  imports: [ProductoComponent],
   templateUrl: './producto.component.html',
-  styleUrl: './producto.component.scss'
+  styleUrl: './producto.component.scss',
 })
 export class ProductoComponent {
 
-  producto = {
-    name: 'Producto 1',
-    image: './assets/images/toy.jpg',
-    price: 100
-  }
+  @Input() producto: Producto = {
+    id: '',
+    price: 0,
+    image: '',
+    name: ''
+  };
+
+  constructor(){}
+
+    ngOnInit(): void{
+
+    }
+
 }

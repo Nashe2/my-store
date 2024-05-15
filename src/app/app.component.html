@@ -14,7 +14,8 @@ y property binding [img] para enviar-->
 <!--Queremos enviar dinamicamente este componente desde el padre
 y si escribimos un input o modificamos un valor enviarlo desde app-img el padre-->
 <hr/>
-<app-producto></app-producto> <!-- Las veces que yo ponga este componente se vera en la vista -->
+
+<app-producto [producto]="producto" *ngFor="let producto of productos"></app-producto> <!-- Las veces que yo ponga este componente se vera en la vista -->
 
 
 <!-- <router-outlet></router-outlet>
